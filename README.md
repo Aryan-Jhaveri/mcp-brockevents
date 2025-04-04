@@ -264,7 +264,7 @@ Try accessing [https://events.brocku.ca/events/rss/](https://events.brocku.ca/ev
 
 <div align="center">
   
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
   [![Issues](https://img.shields.io/github/issues/yourusername/mcp-rssfeed.svg)](https://github.com/Aryan-Jhaveri/mcp-brockevents/issues)
   
 </div>
