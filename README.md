@@ -201,6 +201,27 @@ Examples:
 - 📊 "What's happening next week at Brock?"
 </details>
 
+## 🔧 Customizing RSS Feeds
+
+<details>
+<summary><b>Using RSS from Other Universities</b></summary>
+
+You can modify this server to use event feeds from other universities by editing the `RSS_FEED_URL` constant in the Python file:
+
+1. Open `brock_events_server.py` in a text editor
+2. Locate line 14 with the RSS feed URL:
+   ```python
+   RSS_FEED_URL = "https://experiencebu.brocku.ca/events.rss"
+   ```
+3. Replace it with another university's RSS feed URL, such as:
+   - University of Guelph: `https://gryphlife.uoguelph.ca/Events.rss`
+   - Western University: `http://westernadvance.ca/calendar/western.xml`
+   - Or any other university event RSS feed
+
+⚠️ **Important Disclaimer**: This server is specifically designed for the Brock University RSS feed format. Different universities structure their RSS feeds differently, with varying event tags, date formats, and category systems. Changing the RSS feed URL may require additional code modifications to properly parse and display events.
+
+</details>
+
 ## 🚀 Advanced Use Cases
 
 Students can quickly chat and find events based on their interests:
