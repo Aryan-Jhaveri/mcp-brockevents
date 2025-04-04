@@ -217,6 +217,12 @@ Users can upload their resume to find and filter professional networking events,
 Claude can filter events and create .ics files of selected events for users to add to their iCal or sync across their other calendars. [Learn how to import .ics files to Google Calendar](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop)
 </details>
 
+<details open>
+<summary><b>📊 Schedule Optimization</b></summary>
+
+Users can share an image of their personal schedule and ask "What events fit within my schedule for the month, can you find and filter them for me?" Claude will analyze available time slots and recommend compatible events.
+</details>
+
 ## ⚠️ Troubleshooting
 
 <details>
