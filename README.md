@@ -300,4 +300,6 @@ Contributions are welcome! Feel free to submit pull requests or open issues if y
   
   Copyright © 2024
   
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+  
 </div>
