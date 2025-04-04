@@ -7,9 +7,12 @@ This MCP server connects to the Brock University events RSS feed and provides AI
 - Fetch and parse the Brock University events RSS feed
 - Search for events by keyword
 - Get upcoming events for a specified number of days
-- Filter events by date
+- Filter events by date or date range
+- Filter events by time of day (morning, afternoon, evening)
 - Browse event categories
 - Filter events by category
+- Get specialized views (this week, next week, weekend events)
+- Get detailed information for specific events
 
 ## Installation
 
@@ -18,13 +21,13 @@ This MCP server connects to the Brock University events RSS feed and provides AI
 2. Install the required dependencies:
 
 ```bash
-pip install "mcp[cli]" httpx feedparser python-dateutil
+pip install "mcp[cli]" httpx feedparser python-dateutil pytz
 ```
 
 3. Run the server:
 
 ```bash
-python brocku_events_server.py
+python brock_events_server.py
 ```
 
 ## Using with Claude for Desktop
@@ -45,14 +48,14 @@ To use this server with Claude for Desktop:
     "brocku-events": {
       "command": "python",
       "args": [
-        "/absolute/path/to/brocku_events_server.py"
+        "/absolute/path/to/brock_events_server.py"
       ]
     }
   }
 }
 ```
 
-Replace `/absolute/path/to/brocku_events_server.py` with the actual path to the server file.
+Replace `/absolute/path/to/brock_events_server.py` with the actual path to the server file.
 
 4. Restart Claude for Desktop
 
@@ -63,9 +66,14 @@ The server exposes the following tools:
 - **get_upcoming_events(days)**: Get upcoming events for the specified number of days
 - **search_events(query)**: Search for events matching the query
 - **get_events_by_date(date)**: Get events on a specific date (format: YYYY-MM-DD)
+- **get_events_by_date_range(start_date, end_date)**: Get events between two dates
+- **get_events_by_time_of_day(date, time_range)**: Get events for a specific time of day
 - **get_event_categories()**: List all available event categories with organized grouping
 - **get_events_by_category(category)**: Get events in a specific category with fuzzy matching
 - **get_event_details(query)**: Get detailed information about a specific event by title or ID
+- **get_events_this_week()**: Get all events occurring this week (Monday-Sunday)
+- **get_events_next_week()**: Get all events occurring next week (Monday-Sunday)
+- **get_weekend_events(date)**: Get events for the upcoming or specified weekend
 
 ## Example Queries
 
@@ -81,6 +89,9 @@ Here are some example queries you can ask Claude:
 - "Are there any social events this weekend?"
 - "Show me events with free food"
 - "What club meetings are happening this week?"
+- "What events are happening between March 15 and March 20?"
+- "Show me evening events on Friday"
+- "What's happening next week at Brock?"
 
 ## Troubleshooting
 
