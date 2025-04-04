@@ -4,7 +4,7 @@
   
   ![Brock University](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Brock_University_Arthur_Schmon_Tower_Aug_2008_3.JPG/500px-Brock_University_Arthur_Schmon_Tower_Aug_2008_3.JPG)
 
-  *You're own assistant to help you network and be involved!*
+  *Your own assistant to help you network and be involved!*
   
   [![Model Context Protocol](https://img.shields.io/badge/MCP-Compatible-blue)](https://modelcontextprotocol.io)
   [![Claude](https://img.shields.io/badge/Claude-Desktop-purple)](https://claude.ai/download)
