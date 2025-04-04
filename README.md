@@ -2,7 +2,7 @@
 
 <div align="center">
   
-  ![Brock University](https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Brock_University_logo.svg/320px-Brock_University_logo.svg.png)
+  ![Brock University](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Brock_University_Arthur_Schmon_Tower_Aug_2008_3.JPG/500px-Brock_University_Arthur_Schmon_Tower_Aug_2008_3.JPG)
 
   *Never miss a campus event again!*
   
