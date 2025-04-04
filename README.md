@@ -257,7 +257,7 @@ Claude can filter events and create .ics files of selected events for users to a
 
 If the server starts but tools aren't working, the RSS feed might be unavailable or its format might have changed. 
 
-Try accessing [https://events.brocku.ca/events/rss/](https://events.brocku.ca/events/rss/) in your browser to check if it's accessible.
+Try accessing [https://events.brocku.ca/events/rss/](https://events.brocku.ca/events.rss/) in your browser to check if it's accessible.
 </details>
 
 ## 👥 Contributing
@@ -265,7 +265,7 @@ Try accessing [https://events.brocku.ca/events/rss/](https://events.brocku.ca/ev
 <div align="center">
   
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-  [![Issues](https://img.shields.io/github/issues/yourusername/mcp-rssfeed.svg)](https://github.com/yourusername/mcp-rssfeed/issues)
+  [![Issues](https://img.shields.io/github/issues/yourusername/mcp-rssfeed.svg)](https://github.com/Aryan-Jhaveri/mcp-brockevents/issues)
   
 </div>
 
