@@ -2,9 +2,9 @@
 
 <div align="center">
   
-  ![Brock University](https://upload.wikimedia.org/wikipedia/en/thumb/3/3f/Brock_University_logo.svg/320px-Brock_University_logo.svg.png)
+  ![Brock University](https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Brock_University_Arthur_Schmon_Tower_Aug_2008_3.JPG/500px-Brock_University_Arthur_Schmon_Tower_Aug_2008_3.JPG)
 
-  *Never miss a campus event again!*
+  *Your own assistant to help you network and be involved!*
   
   [![Model Context Protocol](https://img.shields.io/badge/MCP-Compatible-blue)](https://modelcontextprotocol.io)
   [![Claude](https://img.shields.io/badge/Claude-Desktop-purple)](https://claude.ai/download)
@@ -264,7 +264,7 @@ Try accessing [https://events.brocku.ca/events/rss/](https://events.brocku.ca/ev
 
 <div align="center">
   
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
   [![Issues](https://img.shields.io/github/issues/yourusername/mcp-rssfeed.svg)](https://github.com/Aryan-Jhaveri/mcp-brockevents/issues)
   
 </div>
