@@ -100,7 +100,7 @@ The server exposes the following tools:
 
 ## Example Queries
 
-Here are some example queries you can ask Claude:
+Here are some example queries to ask Claude:
 
 - "What events are happening at Brock University this week?"
 - "Are there any music events at Brock University?"
@@ -115,6 +115,13 @@ Here are some example queries you can ask Claude:
 - "What events are happening between March 15 and March 20?"
 - "Show me evening events on Friday"
 - "What's happening next week at Brock?"
+
+### Advanced Use Cases
+
+Students can quickly chat and find events based on their interests:
+
+- Users can upload their resume to find and filter professional networking events, and have Claude create elevator pitches about them. Perfect for preparing a game plan for networking events!
+- Claude can filter events and create .ics files of selected events for users to add to their iCal or sync across their other calendars. [Learn how to import .ics files to Google Calendar](https://support.google.com/calendar/answer/37118?hl=en&co=GENIE.Platform%3DDesktop)
 
 ## Troubleshooting
 
@@ -153,6 +160,12 @@ If the server starts but tools aren't working, the RSS feed might be unavailable
 ## Contributing
 
 Contributions are welcome! Feel free to submit pull requests or open issues if you have suggestions for improvements.
+
+### Developer Resources
+
+For developers who want to build or extend MCP servers:
+- [Building MCP with LLMs](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms) - Learn how to use Claude to help develop MCP servers
+- [Model Context Protocol Documentation](https://modelcontextprotocol.io/docs/concepts/architecture) - Official MCP documentation
 
 ## License
 
