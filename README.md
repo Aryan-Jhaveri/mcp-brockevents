@@ -1,129 +1,100 @@
 # Brock University Events MCP Server
 
-An MCP (Model Context Protocol) server that fetches and provides information about events at Brock University via the ExperienceBU RSS feed.
-
-## Overview
-
-This server connects to the Brock University events RSS feed, parses the events, and provides tools to search, filter, and retrieve event information. It's designed to be used with Claude or other MCP-compatible clients to create an AI assistant for university events.
+This MCP server connects to the Brock University events RSS feed and provides AI assistants with access to campus events.
 
 ## Features
 
-- Fetches and parses the ExperienceBU RSS feed
-- Caches event information to improve performance
-- Provides tools to search events by various criteria (keyword, category, date, location)
-- Offers resources to view upcoming events
-- Includes prompt templates for common event-related queries
+- Fetch and parse the Brock University events RSS feed
+- Search for events by keyword
+- Get upcoming events for a specified number of days
+- Filter events by date
+- Browse event categories
+- Filter events by category
 
 ## Installation
 
-### Prerequisites
+1. Clone this repository or download the server file
 
-- Python 3.7+
-- pip or uv package manager
-
-### Installation Steps
-
-1. Clone this repository
-2. Install dependencies:
+2. Install the required dependencies:
 
 ```bash
-# Using uv (recommended)
-uv pip install "mcp[cli]" httpx
-
-# Or using pip
-pip install "mcp[cli]" httpx
+pip install "mcp[cli]" httpx feedparser python-dateutil
 ```
 
-## Usage
-
-### Running with MCP CLI
-
-The easiest way to run the server is with the MCP CLI:
+3. Run the server:
 
 ```bash
-# Using uv
-uv run mcp dev brock_events_server.py
-
-# Using pip
-mcp dev brock_events_server.py
+python brocku_events_server.py
 ```
 
-### Installing in Claude Desktop
+## Using with Claude for Desktop
 
-To use this server with Claude Desktop:
+To use this server with Claude for Desktop:
 
-```bash
-# Using uv
-uv run mcp install brock_events_server.py --name "Brock Events"
+1. Make sure you have Claude for Desktop installed
 
-# Using pip
-mcp install brock_events_server.py --name "Brock Events"
+2. Open your Claude for Desktop configuration at:
+   - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+
+3. Add the following configuration:
+
+```json
+{
+  "mcpServers": {
+    "brocku-events": {
+      "command": "python",
+      "args": [
+        "/absolute/path/to/brocku_events_server.py"
+      ]
+    }
+  }
+}
 ```
 
-### Direct Execution
+Replace `/absolute/path/to/brocku_events_server.py` with the actual path to the server file.
 
-You can also run the server directly:
-
-```bash
-python brock_events_server.py
-```
+4. Restart Claude for Desktop
 
 ## Available Tools
 
-The server provides the following tools:
+The server exposes the following tools:
 
-1. `search_events` - Search for events with filtering options
-2. `get_event_details` - Get detailed information about a specific event
-3. `get_events_by_day` - Get all events occurring on a specific day
-4. `list_categories` - List all event categories
-5. `list_locations` - List all event locations
+- **get_upcoming_events(days)**: Get upcoming events for the specified number of days
+- **search_events(query)**: Search for events matching the query
+- **get_events_by_date(date)**: Get events on a specific date (format: YYYY-MM-DD)
+- **get_event_categories()**: List all available event categories with organized grouping
+- **get_events_by_category(category)**: Get events in a specific category with fuzzy matching
+- **get_event_details(query)**: Get detailed information about a specific event by title or ID
 
-## Resources
+## Example Queries
 
-- `events://upcoming` - Returns a list of upcoming events
+Here are some example queries you can ask Claude:
 
-## Prompt Templates
-
-1. `find_events_prompt` - Create a prompt to find events based on interests and date range
-2. `plan_my_day_prompt` - Create a prompt to help plan a day's schedule based on available events
-
-## Example Conversations
-
-### Finding Events About a Topic
-
-**User**: "What events related to learning are happening this month?"
-
-**Claude** can:
-1. Use the `search_events` tool with the query "learning" and appropriate date filters
-2. Format the results into a natural response
-3. Suggest specific events that match the user's interests
-
-### Planning a Day on Campus
-
-**User**: "I'll be on campus next Tuesday. What events should I check out?"
-
-**Claude** can:
-1. Use the `get_events_by_day` tool with the date of next Tuesday
-2. Present the events in chronological order
-3. Suggest a schedule based on location and timing
-
-## Customization
-
-You can customize this server by:
-
-1. Modifying the `RSS_URL` constant to point to a different RSS feed
-2. Adjusting the `CACHE_DURATION` to change how often events are refreshed
-3. Adding new tools, resources, or prompts as needed
+- "What events are happening at Brock University this week?"
+- "Are there any music events at Brock University?"
+- "What's happening on campus next Tuesday?"
+- "Show me all the academic events at Brock"
+- "What categories of events are available at Brock University?"
+- "Tell me more about the Blackout Gala event"
+- "When and where is the next workshop happening?"
+- "Are there any social events this weekend?"
+- "Show me events with free food"
+- "What club meetings are happening this week?"
 
 ## Troubleshooting
 
-If you encounter issues:
+If you encounter any issues:
 
-1. Check that the RSS feed URL is accessible
-2. Make sure all dependencies are installed
-3. Verify that your Python version is compatible
-4. Check the MCP Inspector logs for any error messages
+1. Check that the RSS feed URL is still valid
+2. Ensure you have all the required dependencies installed
+3. Verify that your Claude for Desktop configuration is correct
+4. Check Claude for Desktop logs for any error messages
+
+## Contributing
+
+Contributions are welcome! Feel free to submit pull requests or open issues if you have suggestions for improvements.
 
 ## License
 
-This project is provided under the MIT License.
+This project is licensed under the MIT License.
