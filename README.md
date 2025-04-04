@@ -69,10 +69,6 @@ python brock_events_server.py
 
 ## 🔄 Connecting to Claude for Desktop
 
-<div align="center">
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mcp/images/quickstart-hammer.png" alt="Claude Desktop with MCP tools" width="600"/>
-</div>
-
 ### Setting up Claude Desktop
 
 <details open>
@@ -206,10 +202,6 @@ Examples:
 </details>
 
 ## 🚀 Advanced Use Cases
-
-<div align="center">
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mcp/images/quickstart-tools.png" alt="Example MCP Tools" width="400"/>
-</div>
 
 Students can quickly chat and find events based on their interests:
 
