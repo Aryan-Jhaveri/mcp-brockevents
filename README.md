@@ -40,8 +40,8 @@ This MCP server connects to the Brock University events RSS feed and provides AI
 
 ```bash
 # Clone with Git
-git clone https://github.com/yourusername/mcp-rssfeed.git
-cd mcp-rssfeed
+git clone https://github.com/yourusername/mcp-brockevents.git
+cd mcp-brockevents
 
 # Or download the ZIP and extract it
 ```
@@ -114,8 +114,8 @@ Copy and paste the following JSON into the configuration file:
 > ⚠️ **Important**: Replace `/REPLACE/WITH/FULL/PATH/TO/brock_events_server.py` with the actual full path to the server file on your computer.
 
 Examples:
-- **Mac**: `/Users/yourusername/Downloads/mcp-rssfeed/brock_events_server.py`
-- **Windows**: `C:\\Users\\yourusername\\Downloads\\mcp-rssfeed\\brock_events_server.py`
+- **Mac**: `/Users/yourusername/Downloads/mcp-brockevents/brock_events_server.py`
+- **Windows**: `C:\\Users\\yourusername\\Downloads\\mcp-brockevents\\brock_events_server.py`
 </details>
 
 <details open>
@@ -292,7 +292,7 @@ Try accessing [https://events.brocku.ca/events/rss/](https://events.brocku.ca/ev
 <div align="center">
   
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
-  [![Issues](https://img.shields.io/github/issues/yourusername/mcp-rssfeed.svg)](https://github.com/Aryan-Jhaveri/mcp-brockevents/issues)
+  [![Issues](https://img.shields.io/github/issues/yourusername/mcp-brockevents.svg)](https://github.com/Aryan-Jhaveri/mcp-brockevents/issues)
   
 </div>
 
