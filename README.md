@@ -201,24 +201,42 @@ Examples:
 - 📊 "What's happening next week at Brock?"
 </details>
 
-## 🔧 Customizing RSS Feeds
+## 🔧 Customization Guide
 
-<details>
-<summary><b>Using RSS from Other Universities</b></summary>
+<details open>
+<summary><b>📡 Changing the RSS Feed Source</b></summary>
 
-You can modify this server to use event feeds from other universities by editing the `RSS_FEED_URL` constant in the Python file:
+You can configure this server to use event feeds from other universities:
 
-1. Open `brock_events_server.py` in a text editor
-2. Locate line 14 with the RSS feed URL:
+### Step 1: Locate the RSS Feed URL
+
+1. Open `brock_events_server.py` in any text editor
+2. Find line 14 where the RSS feed URL is defined:
    ```python
    RSS_FEED_URL = "https://experiencebu.brocku.ca/events.rss"
    ```
-3. Replace it with another university's RSS feed URL, such as:
-   - University of Guelph: `https://gryphlife.uoguelph.ca/Events.rss`
-   - Western University: `http://westernadvance.ca/calendar/western.xml`
-   - Or any other university event RSS feed
 
-⚠️ **Important Disclaimer**: This server is specifically designed for the Brock University RSS feed format. Different universities structure their RSS feeds differently, with varying event tags, date formats, and category systems. Changing the RSS feed URL may require additional code modifications to properly parse and display events.
+### Step 2: Replace with Your Preferred Feed
+
+Replace the URL with another university's event feed:
+
+| University | RSS/XML Feed URL |
+|------------|------------------|
+| Brock University | https://experiencebu.brocku.ca/events.rss |
+| University of Guelph | https://gryphlife.uoguelph.ca/Events.rss |
+| Western University | http://westernadvance.ca/calendar/western.xml |
+
+### Step 3: Adapt the Parsing Logic (Advanced)
+
+⚠️ **Important Compatibility Note**: 
+
+The server is specifically designed for Brock University's RSS feed structure. Different universities format their event data with unique:
+- Tag naming conventions
+- Date formats
+- Category systems
+- Event property names
+
+If you change the RSS feed URL, you may need to modify the event parsing functions in the code to match the structure of your selected feed. The primary parsing logic is in the `fetch_rss_feed()` and related functions.
 
 </details>
 
