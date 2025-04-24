@@ -63,7 +63,7 @@ Follow these steps to get the Brock University Events MCP Server running on your
 1.  **Install Claude for Desktop:** If you haven't already, download and install the Claude for Desktop application from [claude.ai/download](https://claude.ai/download). Follow the on-screen instructions.
 
 2.  **Open the configuration file:**
-    * **On Mac:** Open the Claude Desktop app, click on the Claude menu at the top of your screen, select "Settings...", click on "Developer" in the left sidebar, and then click "Edit Config".
+    * **On Mac:** Open the Claude Desktop app, click on the Claude menu at the top of your screen, select "Settings...", click on "Developer" in the left sidebar, and then click "Edit Config". (Settings (⌘ + ,) → Developer → Edit Config)
     * **On Windows:** Open File Explorer, navigate to `%APPDATA%\Claude\`, and locate or create the file named `claude_desktop_config.json`.
 
 3.  **Add the server configuration:**
