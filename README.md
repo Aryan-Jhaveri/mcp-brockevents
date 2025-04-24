@@ -33,98 +33,65 @@ This MCP server connects to the Brock University events RSS feed and provides AI
 - 🐍 Python 3.10 or higher installed on your computer
 - 💻 Basic familiarity with command line operations
 
+## 🛠️ Installation Guide
+
+Follow these steps to get the Brock University Events MCP Server running on your computer:
+
+### Prerequisites
+
+* **Python 3.10 or higher:** Make sure you have a compatible version of Python installed.
+* **Basic Command Line Familiarity:** You should be comfortable opening a terminal or command prompt and running basic commands.
+
 ### Step-by-Step Installation
 
-<details open>
-<summary><b>1️⃣ Get the code</b></summary>
+1.  **Get the code:**
+    * **Using Git:** If you have Git installed, open your terminal and run:
+        ```bash
+        git clone https://github.com/Aryan-Jhaveri/mcp-brockevents
+        cd mcp-brockevents
+        ```
+    * **Downloading the ZIP:** Alternatively, you can download the project as a ZIP file from the GitHub page and extract it to a folder on your computer. Then, open your terminal and navigate to that folder using the `cd` command.
 
-```bash
-# Clone with Git
-git clone https://github.com/yourusername/mcp-brockevents.git
-cd mcp-brockevents
-
-# Or download the ZIP and extract it
-```
-</details>
-
-<details open>
-<summary><b>2️⃣ Install dependencies</b></summary>
-
-```bash
-# Install all required packages
-pip install -r requirements.txt
-```
-</details>
-
-<details open>
-<summary><b>3️⃣ Launch the server</b></summary>
-
-```bash
-# Start the MCP server
-python brock_events_server.py
-```
-
-> 💡 The server is running successfully when there is no error output. Keep this terminal window open while using the server with Claude.
-</details>
-
-## 🔄 Connecting to Claude for Desktop
-
+2.  **Install dependencies:**
+    * With your terminal in the project directory (`mcp-brockevents`), run the following command to install all required Python packages:
+        ```bash
+        pip install -r requirements.txt
+        ```
+        
 ### Setting up Claude Desktop
 
-<details open>
-<summary><b>1️⃣ Install Claude for Desktop</b></summary>
+1.  **Install Claude for Desktop:** If you haven't already, download and install the Claude for Desktop application from [claude.ai/download](https://claude.ai/download). Follow the on-screen instructions.
 
-- Download from [claude.ai/download](https://claude.ai/download)
-- Follow the installation instructions for your operating system
-</details>
+2.  **Open the configuration file:**
+    * **On Mac:** Open the Claude Desktop app, click on the Claude menu at the top of your screen, select "Settings...", click on "Developer" in the left sidebar, and then click "Edit Config".
+    * **On Windows:** Open File Explorer, navigate to `%APPDATA%\Claude\`, and locate or create the file named `claude_desktop_config.json`.
 
-<details open>
-<summary><b>2️⃣ Open the configuration file</b></summary>
+3.  **Add the server configuration:**
+    * Copy and paste the following JSON structure into your `claude_desktop_config.json` file.
+    * **Crucially, replace `/REPLACE/WITH/FULL/PATH/TO/brock_events_server.py` with the actual, full path to the `brock_events_server.py` file on your computer.**
 
-**Mac users**:
-1. Click on the Claude menu at the top of your screen
-2. Select "Settings..."
-3. Click on "Developer" in the left sidebar
-4. Click "Edit Config"
-
-**Windows users**:
-1. Open File Explorer
-2. Navigate to `%APPDATA%\Claude\`
-3. Create or edit the file `claude_desktop_config.json`
-</details>
-
-<details open>
-<summary><b>3️⃣ Add the server configuration</b></summary>
-
-Copy and paste the following JSON into the configuration file:
-
-```json
-{
-  "mcpServers": {
-    "brocku-events": {
-      "command": "python",
-      "args": [
-        "/REPLACE/WITH/FULL/PATH/TO/brock_events_server.py"
-      ]
+    ```json
+    {
+      "mcpServers": {
+        "brocku-events": {
+          "command": "python",
+          "args": [
+            "/REPLACE/WITH/FULL/PATH/TO/brock_events_server.py"
+          ]
+        }
+      }
     }
-  }
-}
-```
+    ```
+    * **Example Paths:**
+        * **Mac:** `/Users/yourusername/Downloads/mcp-brockevents/brock_events_server.py`
+        * **Windows:** `C:\\Users\\yourusername\\Downloads\\mcp-brockevents\\brock_events_server.py`
 
-> ⚠️ **Important**: Replace `/REPLACE/WITH/FULL/PATH/TO/brock_events_server.py` with the actual full path to the server file on your computer.
+4.  **Finalize setup:**
+    * Save the `claude_desktop_config.json` file.
+    * Restart Claude for Desktop.
+    * **Verify connection:** After restarting, look for a small hammer icon (🔨) in the bottom right corner of the Claude chat interface. This icon indicates that MCP tools are available and the server is connected.
 
-Examples:
-- **Mac**: `/Users/yourusername/Downloads/mcp-brockevents/brock_events_server.py`
-- **Windows**: `C:\\Users\\yourusername\\Downloads\\mcp-brockevents\\brock_events_server.py`
-</details>
-
-<details open>
-<summary><b>4️⃣ Finalize setup</b></summary>
-
-1. Save the configuration file
-2. Restart Claude for Desktop
-3. **Verify connection**: Look for the 🔨 hammer icon in the bottom right of the chat interface, indicating available tools
-</details>
+Now your AI assistant should be able to access and use the tools provided by the Brock University Events MCP Server!
 
 ## 🧰 Available Tools
 
